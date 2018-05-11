@@ -14,9 +14,6 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css" integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9" crossorigin="anonymous">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" >
-  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/dataTables.bootstrap4.min.css" >
-  <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
-  <script src="https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap4.min.js" ></script>
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
@@ -105,8 +102,7 @@
         </li>
         <li class="nav-item">
           <a class="nav-link" data-toggle="modal" data-target="#exampleModal">
-            <i class="fa fa-fw fa-sign-out"></i>Logout
-          </a>
+            <i class="fa fa-fw fa-sign-out"></i>Logout</a>
         </li>
       </ul>
     </div>
@@ -115,124 +111,128 @@
     <div class="container-fluid">
       <!-- Breadcrumbs-->
       <ol class="breadcrumb">
-        <li class="breadcrumb-item"><h4>Business</h4>
+        <li class="breadcrumb-item"><h4>My Account</h4>
         </li>
       </ol>
 
       <!-- Example DataTables Card-->
-      <div class="card mb-3">
-        <div class="card-header">
-          <i class="fa fa-table"></i> Data List Business</div>
-        <div class="card-body">
-          <div>
-            <form method="GET" style="overflow-x:auto;" class="form-inline">
-              <div class="form-group col-md-3">
-                <input id="pwd" type="text" placeholder="Keyword" name="search" style="width:100%" class="form-control"/>
-              </div>
-              <div class="form-group col-md-3">
-                <select style="width:100%" name="get_atr" class="custom-select form-control">
-                  <option value="">Line of Business</option>
-                  <option value="">Name</option>
-                  <option value="">Address</option>
-                </select>
-              </div>
-              <div class="form-groupcol-md-3">
-                <button type="submit" style="width:100%;" class="btn btn-success form-control"><span class="fa fa-filter"></span> Filter</button>
+      <div class="container-fluid col-sm-12">
+        <div class="nav nav-pills nav-fill mt-4" id="nav-tab" role="tablist">
+          <a class="nav-item nav-link pull-right active" id="nav-basic-info-tab" data-toggle="tab" href="#nav-basic-info" role="tab" aria-controls="nav-basic-info" aria-selected="true">Basic info</a>
+          <a class="nav-item pull-right nav-link" id="nav-change-pass-tab" data-toggle="tab" href="#nav-change-pass" role="tab" aria-controls="nav-change-pass" aria-selected="false">Change password</a>
+          <a class="nav-item pull-right nav-link" id="nav-security-tab" data-toggle="tab" href="#nav-security" role="tab" aria-controls="nav-security" aria-selected="false">Security</a>
+          <a class="nav-item pull-right nav-link" id="nav-deactivated-tab" data-toggle="tab" href="#nav-deactivated" role="tab" aria-controls="nav-deactivated" aria-selected="false">Deactivated</a>
+        </div>
+        <div class="tab-content" id="nav-tabContent">
+          <div class="tab-pane fade show active border" id="nav-basic-info" role="tabpanel" aria-labelledby="nav-basic-info-tab" style="background-color: white">
+            <form action="/action_page.php" class="pt-4">
+              <div class="form-row container">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" class="form-control" id="name" placeholder="Your name" name="name">
+                  </div>
+                  <div class="form-group">
+                    <label for="username">Username:</label>
+                    <input type="text" class="form-control" id="username" placeholder="Your Username" name="username">
+                  </div>
+                  <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="text" class="form-control" id="email" placeholder="Your email" name="email">
+                  </div>
+                  <div class="form-group">
+                    <label for="phone">Phone Number:</label>
+                    <input type="text" class="form-control" id="phone" placeholder="Your Phone Number" name="phone">
+                  </div>
+                  <div class="form-group">
+                    <button class="btn btn-primary btn-block" type="submit" class="btn btn-primary">Save</button>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <img class="img-responsive rounded mx-auto d-block pb-4 pt-3" src="https://indrawatidaud.files.wordpress.com/2016/12/kotak-tisu-doraemon.jpg" alt="User" width="160" height="auto">
+                  <div class="form-group">
+                    <!-- <label for="exampleFormControlFile1">Photo</label> -->
+                    <!-- <input type="text" class="form-control" aria-label="Text input with dropdown button"> -->
+                    <input type="file" class="form-control-file border rounded" width="100%">
+                  </div>
+                </div>
               </div>
             </form>
           </div>
-          <div class="col-md-12">
-            <div class="table-responsive mt-4">
-              <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                  <thead>
-                    <tr class="bg-2 text-white">
-                      <th scope="col">Name</th>
-                      <th scope="col">Line of Business</th>
-                      <th scope="col">Outlets</th>
-                      <th scope="col" class="text-center">Action</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <th scope="row">Wonderlabs</th>
-                      <td>Wonderlabs</td>
-                      <td>2 <a href="">view outlets</a></td>
-                      <td  class="text-center">
-                        <div class="dropdown show">
-                          <button class="btn bg-5 dropdown-toggle btn-sm border" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Action
-                          </button>
-                          <div class="dropdown-menu dropdown-menu-right">
-                            <a class="dropdown-item" href="#">
-                              View
-                            </a>
-                            <!-- <div class="dropdown-divider"></div> -->
-                            <a class="dropdown-item" href="#">
-                              Edit
-                            </a>
-                            <!-- <div class="dropdown-divider"></div> -->
-                            <a class="dropdown-item" data-toggle="modal" data-target="#deleteModal">
-                              Delete
-                            </a>
-                          </div>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <th scope="row">Wonderfood</th>
-                      <td>Wonderlabs</td>
-                      <td>1 <a href="">view outlets</a></td>
-                      <td  class="text-center">
-                        <div class="dropdown show">
-                          <button class="btn bg-5 dropdown-toggle btn-sm border" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Action
-                          </button>
-                          <div class="dropdown-menu dropdown-menu-right" >
-                            <a class="dropdown-item" href="#">
-                              <i class="fa fa-user"></i> View
-                            </a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#">
-                              <i class="fa fa-pencil"></i> Edit
-                            </a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" data-toggle="modal" data-target="#deleteModal">
-                              <i class="fa fa-trash"></i> Delete
-                            </a>
-                          </div>
-                        </div>
-                      </td>
-                    </tr>
-                  </tbody>
-              </table>
-            </div>
-            <nav aria-label="Page navigation example" class="float-right">
-              <ul class="pagination">
-                <li class="page-item">
-                  <a class="page-link" href="#" aria-label="Previous">
-                    <span aria-hidden="true">&laquo;</span>
-                    <span class="sr-only">Previous</span>
-                  </a>
-                </li>
-                <li class="page-item"><a class="page-link" href="#">1</a></li>
-                <li class="page-item">
-                  <a class="page-link" href="#" aria-label="Next">
-                    <span aria-hidden="true">&raquo;</span>
-                    <span class="sr-only">Next</span>
-                  </a>
-                </li>
-              </ul>
-            </nav>
+          
+          <div class="tab-pane fade border" id="nav-change-pass" role="tabpanel" aria-labelledby="nav-change-pass-tab" style="background-color: white">
+              <form action="/action_page.php" class="pt-4">
+                <div class="form-group">
+                  <div class="form-group col-md-6">
+                    <label for="old-pass">Old Password:</label>
+                    <input type="text" class="form-control" id="pwd" placeholder="************" name="pswd">
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label for="new-pass">Password:</label>
+                    <input type="text" class="form-control" id="pwd" placeholder="*************" name="pswd">
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label for="con-pass">Confirm Password:</label>
+                    <input type="text" class="form-control" id="pwd" placeholder="*************" name="pswd">
+                  </div>
+                  <div class="form-group col-md-2">
+                    <button class="btn btn-primary btn-block" type="submit" class="btn btn-primary">Save</button>
+                  </div>
+                </div>
+              </form>
+          </div>
+
+          <div class="tab-pane fade border" id="nav-security" role="tabpanel" aria-labelledby="nav-security-tab" style="background-color: white">
+            <form action="/action_page.php" style="padding:5%">
+              <div class="form-row">
+                <div class="form-group col-md-8 col-sm-10 ml-4">
+                  <h6>Enable two-factor autentication token</h6>
+                </div>
+                <div class="form-group col-md-2 text-center">
+                  <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                  </label>
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group col-md-8 col-sm-10 ml-4">
+                  <h6>Preven login from other IP address (current IP address : <a href="">144.205.456.32</a>)</h6>
+                </div>
+                <div class="form-group col-md-2 text-center">
+                  <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                  </label>
+                </div>
+              </div>
+              <div class="form-group col-md-2 m-2">
+                <button class="btn btn-primary btn-block" type="submit" class="btn btn-primary">Save</button>
+              </div>
+            </form>
+          </div>
+          
+          <div class="tab-pane fade border" id="nav-deactivated" role="tabpanel" aria-labelledby="nav-deactivated-tab" style="background-color: white">
+            <form action="/action_page.php" style="padding:5%">
+              <div class="form-row">
+                <div class="form-group col-md-8 ml-4">
+                  <h6>Did you want to deactivated your account</h6>
+                </div>
+                <div class="form-group">
+                  <div class="form-check col-md-12 ml-4">
+                    <input class="form-check-input" type="checkbox" id="gridCheck">
+                    <label class="form-check-label" for="gridCheck">
+                      I agree that all my data will be deleted and won't be recoverable upon deleted
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group col-md-2 m-2">
+                <button class="btn btn-primary btn-block" type="submit" class="btn btn-primary">Save</button>
+              </div>
+            </form>
           </div>
         </div>
-        <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
-      </div>
-      <a href="#" class="float">
-        <i class="fa fa-plus fa-2x my-float"></i>
-      </a>
-      <div class="label-container">
-        <div class="label-text">Add Outlets</div>
-        <i class="fa fa-play label-arrow"></i>
       </div>
     </div>   
   </div>
@@ -255,24 +255,6 @@
           <div class="modal-footer">
             <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
             <a class="btn btn-primary" href="login.html">Logout</a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- delete modal  -->
-    <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel" aria-hidden="true">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="deleteModalLabel">Are you sure to delete ?</h5>
-            <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">×</span>
-            </button>
-          </div>
-          <div class="modal-body">Select "Delete" below if you are ready to delete it.</div>
-          <div class="modal-footer">
-            <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-            <a class="btn btn-primary" href="#">Delete</a>
           </div>
         </div>
       </div>

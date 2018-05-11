@@ -43,7 +43,3 @@
     event.preventDefault();
   });
 })(jQuery); // End of use strict
-
-$(document).ready( function () {
-  $('#dataTable').DataTable();
-} );

@@ -35,8 +35,8 @@
         <li class="nav-item text-center mt-5 mb-2" data-toggle="tooltip" title="photo-profile">
           <img class="img-responsive rounded-circle" src="https://indrawatidaud.files.wordpress.com/2016/12/kotak-tisu-doraemon.jpg" alt="User" width="100" height="auto">
           <div class="container">
-            <h5 class="text-center mt-3 mb-0 main-text"><strong>Doraemon Nobita Chan</strong></h5>
-            <p class="text-center mb-4" style="font-size:12px">- Business Owner -</p>
+            <h5 class="text-center mt-3 mb-0 main-text"><strong>Doraemon Nobita</strong></h5>
+            <p class="text-center mb-4 main-text" style="font-size:12px">- Administrator -</p>
           </div>
         </li>
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
@@ -45,21 +45,27 @@
             <span class="nav-link-text">Dashboard</span>
           </a>
         </li>
-        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Charts">
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Categories">
           <a class="nav-link" href="charts.html">
-            <i class="fa fa-fw fa-area-chart"></i>
+            <i class="fa fa-fw fa-list"></i>
+            <span class="nav-link-text">Categories</span>
+          </a>
+        </li>
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Business">
+          <a class="nav-link" href="charts.html">
+            <i class="fa fa-fw fa-briefcase"></i>
             <span class="nav-link-text">Business</span>
           </a>
         </li>
-        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Outlets">
           <a class="nav-link" href="tables.html">
-            <i class="fa fa-fw fa-table"></i>
+            <i class="fa fa-fw fa-bank"></i>
             <span class="nav-link-text">Outlets</span>
           </a>
         </li>
-        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Components">
-          <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseComponents" data-parent="#exampleAccordion">
-            <i class="fa fa-fw fa-wrench"></i>
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Reviewa">
+          <a class="nav-link" href="#" >
+            <i class="fa fa-fw fa-comments-o"></i>
             <span class="nav-link-text">Reviews</span>
           </a>
           <!-- <ul class="sidenav-second-level collapse" id="collapseComponents">
@@ -115,26 +121,19 @@
     <div class="container-fluid">
       <!-- Breadcrumbs-->
       <ol class="breadcrumb">
-        <li class="breadcrumb-item"><h4>Business</h4>
+        <li class="breadcrumb-item"><h4>Categories</h4>
         </li>
       </ol>
 
       <!-- Example DataTables Card-->
       <div class="card mb-3">
         <div class="card-header">
-          <i class="fa fa-table"></i> Data List Business</div>
+          <i class="fa fa-table"></i> Data List Categories</div>
         <div class="card-body">
           <div>
             <form method="GET" style="overflow-x:auto;" class="form-inline">
               <div class="form-group col-md-3">
                 <input id="pwd" type="text" placeholder="Keyword" name="search" style="width:100%" class="form-control"/>
-              </div>
-              <div class="form-group col-md-3">
-                <select style="width:100%" name="get_atr" class="custom-select form-control">
-                  <option value="">Line of Business</option>
-                  <option value="">Name</option>
-                  <option value="">Address</option>
-                </select>
               </div>
               <div class="form-groupcol-md-3">
                 <button type="submit" style="width:100%;" class="btn btn-success form-control"><span class="fa fa-filter"></span> Filter</button>
@@ -147,32 +146,30 @@
                   <thead>
                     <tr class="bg-2 text-white">
                       <th scope="col">Name</th>
-                      <th scope="col">Line of Business</th>
-                      <th scope="col">Outlets</th>
+                      <th scope="col">Num. of Business</th>
                       <th scope="col" class="text-center">Action</th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr>
                       <th scope="row">Wonderlabs</th>
-                      <td>Wonderlabs</td>
-                      <td>2 <a href="">view outlets</a></td>
+                      <td>134</td>
                       <td  class="text-center">
-                        <div class="dropdown show">
+                        <div class="dropdown">
                           <button class="btn bg-5 dropdown-toggle btn-sm border" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Action
                           </button>
                           <div class="dropdown-menu dropdown-menu-right">
                             <a class="dropdown-item" href="#">
-                              View
+                              <i class="fa fa-user"></i> View
                             </a>
-                            <!-- <div class="dropdown-divider"></div> -->
+                            <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="#">
-                              Edit
+                              <i class="fa fa-pencil"></i> Edit
                             </a>
-                            <!-- <div class="dropdown-divider"></div> -->
+                            <div class="dropdown-divider"></div>
                             <a class="dropdown-item" data-toggle="modal" data-target="#deleteModal">
-                              Delete
+                              <i class="fa fa-trash"></i> Delete
                             </a>
                           </div>
                         </div>
@@ -180,10 +177,9 @@
                     </tr>
                     <tr>
                       <th scope="row">Wonderfood</th>
-                      <td>Wonderlabs</td>
-                      <td>1 <a href="">view outlets</a></td>
+                      <td>45</td>
                       <td  class="text-center">
-                        <div class="dropdown show">
+                        <div class="dropdown">
                           <button class="btn bg-5 dropdown-toggle btn-sm border" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Action
                           </button>
@@ -231,7 +227,7 @@
         <i class="fa fa-plus fa-2x my-float"></i>
       </a>
       <div class="label-container">
-        <div class="label-text">Add Outlets</div>
+        <div class="label-text">Add Categories</div>
         <i class="fa fa-play label-arrow"></i>
       </div>
     </div>   

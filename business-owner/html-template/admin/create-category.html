@@ -35,8 +35,8 @@
         <li class="nav-item text-center mt-5 mb-2" data-toggle="tooltip" title="photo-profile">
           <img class="img-responsive rounded-circle" src="https://indrawatidaud.files.wordpress.com/2016/12/kotak-tisu-doraemon.jpg" alt="User" width="100" height="auto">
           <div class="container">
-            <h5 class="text-center mt-3 mb-0 main-text"><strong>Doraemon Nobita Chan</strong></h5>
-            <p class="text-center mb-4" style="font-size:12px">- Business Owner -</p>
+            <h5 class="text-center mt-3 mb-0 main-text"><strong>Doraemon Nobita</strong></h5>
+            <p class="text-center mb-4 main-text" style="font-size:12px">- Administrator -</p>
           </div>
         </li>
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
@@ -45,21 +45,27 @@
             <span class="nav-link-text">Dashboard</span>
           </a>
         </li>
-        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Charts">
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Categories">
           <a class="nav-link" href="charts.html">
-            <i class="fa fa-fw fa-area-chart"></i>
+            <i class="fa fa-fw fa-list"></i>
+            <span class="nav-link-text">Categories</span>
+          </a>
+        </li>
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Business">
+          <a class="nav-link" href="charts.html">
+            <i class="fa fa-fw fa-briefcase"></i>
             <span class="nav-link-text">Business</span>
           </a>
         </li>
-        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Outlets">
           <a class="nav-link" href="tables.html">
-            <i class="fa fa-fw fa-table"></i>
+            <i class="fa fa-fw fa-bank"></i>
             <span class="nav-link-text">Outlets</span>
           </a>
         </li>
-        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Components">
-          <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseComponents" data-parent="#exampleAccordion">
-            <i class="fa fa-fw fa-wrench"></i>
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Reviewa">
+          <a class="nav-link" href="#" >
+            <i class="fa fa-fw fa-comments-o"></i>
             <span class="nav-link-text">Reviews</span>
           </a>
           <!-- <ul class="sidenav-second-level collapse" id="collapseComponents">
@@ -114,7 +120,7 @@
     <div class="container-fluid">
       <!-- Breadcrumbs-->
       <ol class="breadcrumb">
-        <li class="breadcrumb-item"><h4>Create Business</h4>
+        <li class="breadcrumb-item"><h4>Create Category</h4>
         </li>
       </ol>
 
@@ -122,90 +128,16 @@
       <div>
         <form action="/action_page.php" class="mt-4">
           <div class="form-group col-md-6">
-            <label for="line">Line of Business:</label>
-            <select name="get_atr" class="custom-select">
-              <option value="">Line of Business</option>
-              <option value="">Name</option>
-              <option value="">Address</option>
-            </select>
-          </div>
-          <div class="form-group col-md-6">
-            <label for="name">Name of Business:</label>
+            <label for="name">Category name:</label>
             <input type="text" class="form-control" id="pwd" placeholder="Name" name="pswd">
-          </div>
-          <div class="form-group col-md-6">
-            <label for="email">Email:</label>
-            <input type="text" class="form-control" id="pwd" placeholder="somthing@something.com" name="pswd">
-          </div>
-          <div class="form-group col-md-6">
-            <label for="website">Website:</label>
-            <input type="text" class="form-control" id="website" placeholder="http://www.something.com" name="pswd">
           </div>
           <div class="form-group col-md-9">
             <label for="description">Description:</label>
             <textarea name="" id="" cols="30" rows="5" class="form-control"> Description about is </textarea>
           </div>
-          <label for="address" class="ml-3">Address :</label>
-          <div class="form-group col-md-9 border ml-3 pt-2">
-            <div class="form-row">
-              <div class="form-group col">
-                <label for="line1">Line 1</label>
-                <input type="text" class="form-control" id="inputEmail4" placeholder="Line 1 address">
-              </div>
-              <div class="form-group col">
-                <label for="line2">Line 2</label>
-                <input type="text" class="form-control" id="inputPassword4" placeholder="Line 2 address">
-              </div>
-            </div>
-            <div class="form-row">
-              <div class="form-group col-md-6">
-                <label for="line1">Province</label>
-                <select name="get_atr" class="custom-select">
-                  <option value="">Province</option>
-                  <option value="">Name</option>
-                  <option value="">Address</option>
-                </select>
-              </div>
-              <div class="form-group col-md-3">
-                <label for="line2">City</label>
-                <select name="get_atr" class="custom-select">
-                  <option value="">City</option>
-                  <option value="">Name</option>
-                  <option value="">Address</option>
-                </select>
-              </div>
-              <div class="form-group col-md-3">
-                <label for="zipcode">Postal code</label>
-                <input type="text" class="form-control" id="inputPassword4" placeholder="Postal Code">
-              </div>
-            </div>
-            <div class="form-row">
-              <div class="form-group col-md-4">
-                <button class="btn btn-secondary btn-block" type="submit" class="btn btn-primary">Geolocate</button>
-              </div>
-            </div>
-            <div class="form-row">
-              <div class="form-group col-md-3">
-                <label for="zipcode">Latitude</label>
-                <input type="text" class="form-control" id="inputPassword4" placeholder="Latitude" readonly>
-              </div>
-              <div class="form-group col-md-3">
-                <label for="zipcode">Longitude</label>
-                <input type="text" class="form-control" id="inputPassword4" placeholder="Longitude" readonly>
-              </div>
-            </div>
-            <div class="form-row">
-              <div class="form-group col-md-3">
-                <a href=""> View in maps ></a>
-              </div>
-            </div>
-          </div>
           <div class="form-row">
             <div class="form-group col-md-2 ml-3">
               <button class="btn btn-primary btn-block" type="submit">Submit</button>
-            </div>
-            <div class="form-group col-md-4">
-              <button class="btn btn-primary btn-block " type="submit" >Submit and Add Outlets</button>
             </div>
           </div>
         </form>

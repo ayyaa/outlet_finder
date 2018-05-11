@@ -35,8 +35,8 @@
         <li class="nav-item text-center mt-5 mb-2" data-toggle="tooltip" title="photo-profile">
           <img class="img-responsive rounded-circle" src="https://indrawatidaud.files.wordpress.com/2016/12/kotak-tisu-doraemon.jpg" alt="User" width="100" height="auto">
           <div class="container">
-            <h5 class="text-center mt-3 mb-0 main-text"><strong>Doraemon Nobita Chan</strong></h5>
-            <p class="text-center mb-4" style="font-size:12px">- Business Owner -</p>
+            <h5 class="text-center mt-3 mb-0 main-text"><strong>Doraemon Nobita</strong></h5>
+            <p class="text-center mb-4 main-text" style="font-size:12px">- Administrator -</p>
           </div>
         </li>
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
@@ -45,21 +45,27 @@
             <span class="nav-link-text">Dashboard</span>
           </a>
         </li>
-        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Charts">
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Categories">
           <a class="nav-link" href="charts.html">
-            <i class="fa fa-fw fa-area-chart"></i>
+            <i class="fa fa-fw fa-list"></i>
+            <span class="nav-link-text">Categories</span>
+          </a>
+        </li>
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Business">
+          <a class="nav-link" href="charts.html">
+            <i class="fa fa-fw fa-briefcase"></i>
             <span class="nav-link-text">Business</span>
           </a>
         </li>
-        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Outlets">
           <a class="nav-link" href="tables.html">
-            <i class="fa fa-fw fa-table"></i>
+            <i class="fa fa-fw fa-bank"></i>
             <span class="nav-link-text">Outlets</span>
           </a>
         </li>
-        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Components">
-          <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseComponents" data-parent="#exampleAccordion">
-            <i class="fa fa-fw fa-wrench"></i>
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Reviewa">
+          <a class="nav-link" href="#" >
+            <i class="fa fa-fw fa-comments-o"></i>
             <span class="nav-link-text">Reviews</span>
           </a>
           <!-- <ul class="sidenav-second-level collapse" id="collapseComponents">
@@ -105,8 +111,7 @@
         </li>
         <li class="nav-item">
           <a class="nav-link" data-toggle="modal" data-target="#exampleModal">
-            <i class="fa fa-fw fa-sign-out"></i>Logout
-          </a>
+            <i class="fa fa-fw fa-sign-out"></i>Logout</a>
         </li>
       </ul>
     </div>
@@ -115,98 +120,89 @@
     <div class="container-fluid">
       <!-- Breadcrumbs-->
       <ol class="breadcrumb">
-        <li class="breadcrumb-item"><h4>Business</h4>
+        <li class="breadcrumb-item"><h4>Reviews</h4>
         </li>
       </ol>
 
       <!-- Example DataTables Card-->
       <div class="card mb-3">
         <div class="card-header">
-          <i class="fa fa-table"></i> Data List Business</div>
+          <i class="fa fa-table"></i> Data List Reviews</div>
         <div class="card-body">
           <div>
             <form method="GET" style="overflow-x:auto;" class="form-inline">
               <div class="form-group col-md-3">
-                <input id="pwd" type="text" placeholder="Keyword" name="search" style="width:100%" class="form-control"/>
+                <input class="form-control" id="pwd" type="text" placeholder="Keyword" name="search" style="width:100%;" class="form-control"/>
               </div>
-              <div class="form-group col-md-3">
-                <select style="width:100%" name="get_atr" class="custom-select form-control">
-                  <option value="">Line of Business</option>
+              <div class="form-group col-md-2">
+                <select style="width:100%;" name="get_atr" class="custom-select form-control">
+                  <option value="">Business</option>
                   <option value="">Name</option>
                   <option value="">Address</option>
                 </select>
               </div>
-              <div class="form-groupcol-md-3">
+              <div class="form-group col-md-2">
+                  <select style="width:100%;" name="get_atr" class="custom-select form-control">
+                    <option value="">Outlets</option>
+                    <option value="">Name</option>
+                    <option value="">Address</option>
+                  </select>
+                </div>
+              <div class="form-group col-md-2">
                 <button type="submit" style="width:100%;" class="btn btn-success form-control"><span class="fa fa-filter"></span> Filter</button>
               </div>
             </form>
           </div>
-          <div class="col-md-12">
-            <div class="table-responsive mt-4">
-              <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                  <thead>
-                    <tr class="bg-2 text-white">
-                      <th scope="col">Name</th>
-                      <th scope="col">Line of Business</th>
-                      <th scope="col">Outlets</th>
-                      <th scope="col" class="text-center">Action</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <th scope="row">Wonderlabs</th>
-                      <td>Wonderlabs</td>
-                      <td>2 <a href="">view outlets</a></td>
-                      <td  class="text-center">
-                        <div class="dropdown show">
-                          <button class="btn bg-5 dropdown-toggle btn-sm border" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Action
-                          </button>
-                          <div class="dropdown-menu dropdown-menu-right">
-                            <a class="dropdown-item" href="#">
-                              View
-                            </a>
-                            <!-- <div class="dropdown-divider"></div> -->
-                            <a class="dropdown-item" href="#">
-                              Edit
-                            </a>
-                            <!-- <div class="dropdown-divider"></div> -->
-                            <a class="dropdown-item" data-toggle="modal" data-target="#deleteModal">
-                              Delete
-                            </a>
-                          </div>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <th scope="row">Wonderfood</th>
-                      <td>Wonderlabs</td>
-                      <td>1 <a href="">view outlets</a></td>
-                      <td  class="text-center">
-                        <div class="dropdown show">
-                          <button class="btn bg-5 dropdown-toggle btn-sm border" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Action
-                          </button>
-                          <div class="dropdown-menu dropdown-menu-right" >
-                            <a class="dropdown-item" href="#">
-                              <i class="fa fa-user"></i> View
-                            </a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#">
-                              <i class="fa fa-pencil"></i> Edit
-                            </a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" data-toggle="modal" data-target="#deleteModal">
-                              <i class="fa fa-trash"></i> Delete
-                            </a>
-                          </div>
-                        </div>
-                      </td>
-                    </tr>
-                  </tbody>
-              </table>
+          <div class="col-md-10">
+            <div class="media mt-4 bg-reviews p-3 rounded">
+              <div class="media-body">
+                <h5>Media heading</h5>
+                <p>2 days Ago - Outlet : <a href="">Wonderlabs Exploler Campus </a></p>
+                <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
+                <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><a href="" class="ml-3">delete</a>
+              </div>
             </div>
-            <nav aria-label="Page navigation example" class="float-right">
+            <div class="media mt-4 bg-reviews p-3 rounded">
+              <div class="media-body">
+                <h5>Media heading</h5>
+                <p>2 days Ago - Outlet : <a href="">Wonderlabs Exploler Campus</a></p>
+                <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
+                <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><a href="" class="ml-3">delete</a>
+              </div>
+            </div>
+            <div class="media mt-4 bg-reviews p-3 rounded">
+              <div class="media-body">
+                <h5>Media heading</h5>
+                <p>2 days Ago - Outlet : <a href="">Wonderlabs Exploler Campus</a></p>
+                <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
+                <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><a href="" class="ml-3">delete</a>
+              </div>
+            </div>
+            <div class="media mt-4 bg-reviews p-3 rounded">
+              <div class="media-body">
+                <h5>Media heading</h5>
+                <p>2 days Ago - Outlet : <a href="">Wonderlabs Exploler Campus</a></p>
+                <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
+                <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><a href="" class="ml-3">delete</a>
+              </div>
+            </div>
+            <div class="media mt-4 bg-reviews p-3 rounded">
+              <div class="media-body">
+                <h5>Media heading</h5>
+                <p>2 days Ago - Outlet : <a href="">Wonderlabs Exploler Campus</a></p>
+                <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
+                <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><a href="" class="ml-3">delete</a>
+              </div>
+            </div>
+            <div class="media mt-4 bg-reviews p-3 rounded">
+              <div class="media-body">
+                <h5>Media heading</h5>
+                <p>2 days Ago - Outlet : <a href="">Wonderlabs Exploler Campus</a></p>
+                <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
+                <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><a href="" class="ml-3">delete</a>
+              </div>
+            </div>
+            <nav aria-label="Page navigation example" class="float-right mt-4">
               <ul class="pagination">
                 <li class="page-item">
                   <a class="page-link" href="#" aria-label="Previous">
@@ -227,13 +223,6 @@
         </div>
         <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
       </div>
-      <a href="#" class="float">
-        <i class="fa fa-plus fa-2x my-float"></i>
-      </a>
-      <div class="label-container">
-        <div class="label-text">Add Outlets</div>
-        <i class="fa fa-play label-arrow"></i>
-      </div>
     </div>   
   </div>
     <!-- /.container-fluid-->
@@ -246,7 +235,7 @@
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+            <h5 class="modal-title" id="exampleModalLabel">Are you sure to logout from this system?</h5>
             <button class="close" type="button" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">×</span>
             </button>
@@ -255,24 +244,6 @@
           <div class="modal-footer">
             <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
             <a class="btn btn-primary" href="login.html">Logout</a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- delete modal  -->
-    <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel" aria-hidden="true">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="deleteModalLabel">Are you sure to delete ?</h5>
-            <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">×</span>
-            </button>
-          </div>
-          <div class="modal-body">Select "Delete" below if you are ready to delete it.</div>
-          <div class="modal-footer">
-            <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-            <a class="btn btn-primary" href="#">Delete</a>
           </div>
         </div>
       </div>

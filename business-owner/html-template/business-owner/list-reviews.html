@@ -34,9 +34,9 @@
       <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
         <li class="nav-item text-center mt-5 mb-2" data-toggle="tooltip" title="photo-profile">
           <img class="img-responsive rounded-circle" src="https://indrawatidaud.files.wordpress.com/2016/12/kotak-tisu-doraemon.jpg" alt="User" width="100" height="auto">
-          <h5 class="text-center mt-4 mb-0 main-text">Business Owner</h5>
           <div class="container">
-            <div class="divider-sidebar"></div>
+            <h5 class="text-center mt-3 mb-0 main-text"><strong>Doraemon Nobita Chan</strong></h5>
+            <p class="text-center mb-4" style="font-size:12px">- Business Owner -</p>
           </div>
         </li>
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
@@ -123,27 +123,27 @@
         <div class="card-header">
           <i class="fa fa-table"></i> Data List Reviews</div>
         <div class="card-body">
-          <div class="mb-3">
+          <div>
             <form method="GET" style="overflow-x:auto;" class="form-inline">
-              <div class="form-group">
-                <input id="pwd" type="text" placeholder="Keyword" name="search" style="width:auto; margin-right:1rem" class="form-control"/>
+              <div class="form-group col-md-3">
+                <input class="form-control" id="pwd" type="text" placeholder="Keyword" name="search" style="width:100%;" class="form-control"/>
               </div>
-              <div class="form-group">
-                <select style="width:auto; margin-right:1rem" name="get_atr" class="custom-select">
+              <div class="form-group col-md-2">
+                <select style="width:100%;" name="get_atr" class="custom-select form-control">
                   <option value="">Business</option>
                   <option value="">Name</option>
                   <option value="">Address</option>
                 </select>
               </div>
-              <div class="form-group">
-                  <select style="width:auto; margin-right:1rem" name="get_atr" class="custom-select">
+              <div class="form-group col-md-2">
+                  <select style="width:100%;" name="get_atr" class="custom-select form-control">
                     <option value="">Outlets</option>
                     <option value="">Name</option>
                     <option value="">Address</option>
                   </select>
                 </div>
-              <div class="form-group">
-                <button type="submit" style="width:auto;" class="btn btn-success form-control"><span class="fa fa-filter"></span> Filter</button>
+              <div class="form-group col-md-2">
+                <button type="submit" style="width:100%;" class="btn btn-success form-control"><span class="fa fa-filter"></span> Filter</button>
               </div>
             </form>
           </div>
@@ -196,24 +196,24 @@
                 <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
               </div>
             </div>
+            <nav aria-label="Page navigation example" class="float-right mt-4">
+              <ul class="pagination">
+                <li class="page-item">
+                  <a class="page-link" href="#" aria-label="Previous">
+                    <span aria-hidden="true">&laquo;</span>
+                    <span class="sr-only">Previous</span>
+                  </a>
+                </li>
+                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                <li class="page-item">
+                  <a class="page-link" href="#" aria-label="Next">
+                    <span aria-hidden="true">&raquo;</span>
+                    <span class="sr-only">Next</span>
+                  </a>
+                </li>
+              </ul>
+            </nav>
           </div>
-          <nav aria-label="Page navigation example" class="pagination-position">
-            <ul class="pagination">
-              <li class="page-item">
-                <a class="page-link" href="#" aria-label="Previous">
-                  <span aria-hidden="true">&laquo;</span>
-                  <span class="sr-only">Previous</span>
-                </a>
-              </li>
-              <li class="page-item"><a class="page-link" href="#">1</a></li>
-              <li class="page-item">
-                <a class="page-link" href="#" aria-label="Next">
-                  <span aria-hidden="true">&raquo;</span>
-                  <span class="sr-only">Next</span>
-                </a>
-              </li>
-            </ul>
-          </nav>
         </div>
         <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
       </div>

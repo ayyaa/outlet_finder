@@ -14,9 +14,6 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css" integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9" crossorigin="anonymous">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" >
-  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/dataTables.bootstrap4.min.css" >
-  <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
-  <script src="https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap4.min.js" ></script>
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
@@ -105,8 +102,7 @@
         </li>
         <li class="nav-item">
           <a class="nav-link" data-toggle="modal" data-target="#exampleModal">
-            <i class="fa fa-fw fa-sign-out"></i>Logout
-          </a>
+            <i class="fa fa-fw fa-sign-out"></i>Logout</a>
         </li>
       </ul>
     </div>
@@ -115,28 +111,35 @@
     <div class="container-fluid">
       <!-- Breadcrumbs-->
       <ol class="breadcrumb">
-        <li class="breadcrumb-item"><h4>Business</h4>
+        <li class="breadcrumb-item"><h4>Outlets</h4>
         </li>
       </ol>
 
       <!-- Example DataTables Card-->
       <div class="card mb-3">
         <div class="card-header">
-          <i class="fa fa-table"></i> Data List Business</div>
+          <i class="fa fa-table"></i> Data List Outlets</div>
         <div class="card-body">
-          <div>
-            <form method="GET" style="overflow-x:auto;" class="form-inline">
+          <div class="mb-3">
+            <form method="GET" class="form-inline">
               <div class="form-group col-md-3">
                 <input id="pwd" type="text" placeholder="Keyword" name="search" style="width:100%" class="form-control"/>
               </div>
-              <div class="form-group col-md-3">
-                <select style="width:100%" name="get_atr" class="custom-select form-control">
-                  <option value="">Line of Business</option>
+              <div class="form-group col-md-2">
+                <select style="width:100%" name="get_atr" class="custom-select">
+                  <option value="">Business</option>
                   <option value="">Name</option>
                   <option value="">Address</option>
                 </select>
               </div>
-              <div class="form-groupcol-md-3">
+              <div class="form-group col-md-2">
+                <select style="width:100%" name="get_atr" class="custom-select form-control">
+                  <option value="">City</option>
+                  <option value="">Name</option>
+                  <option value="">Address</option>
+                </select>
+              </div>
+              <div class="form-group col-md-2">
                 <button type="submit" style="width:100%;" class="btn btn-success form-control"><span class="fa fa-filter"></span> Filter</button>
               </div>
             </form>
@@ -144,66 +147,83 @@
           <div class="col-md-12">
             <div class="table-responsive mt-4">
               <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                  <thead>
-                    <tr class="bg-2 text-white">
-                      <th scope="col">Name</th>
-                      <th scope="col">Line of Business</th>
-                      <th scope="col">Outlets</th>
-                      <th scope="col" class="text-center">Action</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <th scope="row">Wonderlabs</th>
-                      <td>Wonderlabs</td>
-                      <td>2 <a href="">view outlets</a></td>
-                      <td  class="text-center">
-                        <div class="dropdown show">
-                          <button class="btn bg-5 dropdown-toggle btn-sm border" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Action
-                          </button>
-                          <div class="dropdown-menu dropdown-menu-right">
-                            <a class="dropdown-item" href="#">
-                              View
-                            </a>
-                            <!-- <div class="dropdown-divider"></div> -->
-                            <a class="dropdown-item" href="#">
-                              Edit
-                            </a>
-                            <!-- <div class="dropdown-divider"></div> -->
-                            <a class="dropdown-item" data-toggle="modal" data-target="#deleteModal">
-                              Delete
-                            </a>
-                          </div>
+                <thead>
+                  <tr class="bg-2 text-white" >
+                    <th scope="col">Name</th>
+                    <th scope="col">Business</th>
+                    <th scope="col">City</th>
+                    <th scope="col">Page Views</th>
+                    <th scope="col" class="text-center">Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr >
+                    <th scope="row">Wonderlabs Amstrong</th>
+                    <td>Wonderlabs</td>
+                    <td>Yogyakarta</td>
+                    <td>30</td>
+                    <td class="text-center">
+                      <div class="dropdown">
+                        <button class="btn bg-5 dropdown-toggle btn-sm border" type="button" data-toggle="dropdown"  aria-haspopup="true" aria-expanded="false">
+                          Action<span class="caret"></span>
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-right">
+                          <a class="dropdown-item" href="#">
+                            <i class="fa fa-user"></i> View
+                          </a>
+                          <div class="dropdown-divider"></div>
+                          <a class="dropdown-item" data-toggle="modal" data-target="#deleteModal">
+                            <i class="fa fa-trash"></i> Delete
+                          </a>
                         </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <th scope="row">Wonderfood</th>
-                      <td>Wonderlabs</td>
-                      <td>1 <a href="">view outlets</a></td>
-                      <td  class="text-center">
-                        <div class="dropdown show">
-                          <button class="btn bg-5 dropdown-toggle btn-sm border" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Action
-                          </button>
-                          <div class="dropdown-menu dropdown-menu-right" >
-                            <a class="dropdown-item" href="#">
-                              <i class="fa fa-user"></i> View
-                            </a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#">
-                              <i class="fa fa-pencil"></i> Edit
-                            </a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" data-toggle="modal" data-target="#deleteModal">
-                              <i class="fa fa-trash"></i> Delete
-                            </a>
-                          </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Wonderlabs Exploler</th>
+                    <td>Wonderlabs</td>
+                    <td>Yogyakarta</td>
+                    <td>9</td>
+                    <td class="text-center">
+                      <div class="dropdown clearfix">
+                        <button class="btn bg-5 dropdown-toggle btn-sm border" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          Action<span class="caret"></span>
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-right">
+                          <a class="dropdown-item" href="#">
+                            <i class="fa fa-user"></i> View
+                          </a>
+                          <div class="dropdown-divider"></div>
+                          <a class="dropdown-item" data-toggle="modal" data-target="#deleteModal">
+                            <i class="fa fa-trash"></i> Delete
+                          </a>
                         </div>
-                      </td>
-                    </tr>
-                  </tbody>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Wonderlabs Sputnik</th>
+                    <td>Wonderlabs</td>
+                    <td>Yogyakarta</td>
+                    <td>9</td>
+                    <td class="text-center">
+                      <div class="dropdown">
+                        <button class="btn bg-5 dropdown-toggle btn-sm border" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          Action
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-right">
+                          <a class="dropdown-item" href="#">
+                            <i class="fa fa-user"></i> View
+                          </a>
+                          <div class="dropdown-divider"></div>
+                          <a class="dropdown-item" data-toggle="modal" data-target="#deleteModal">
+                            <i class="fa fa-trash"></i> Delete
+                          </a>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
               </table>
             </div>
             <nav aria-label="Page navigation example" class="float-right">
